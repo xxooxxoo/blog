@@ -1,0 +1,15 @@
+=link_to '新建一个类别', new_category_path
+br
+- if @categories.present?
+  table
+    thead
+      th 类别名称
+      th 操作
+    tbody
+      - @categories.each do |category|
+        tr
+          td = category.name
+          td = link_to '删除', category,  method: :delete
+- else
+  | 没有数据!
+  
