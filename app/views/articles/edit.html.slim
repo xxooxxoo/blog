@@ -1,0 +1,7 @@
+= form_for @article do |a|
+ lable 标题
+ = a.text_field:title
+ br
+ lable 内容
+ = a.text_area:content
+ =a.submit '修改'

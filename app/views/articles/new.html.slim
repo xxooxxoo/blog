@@ -1,0 +1,8 @@
+= form_for @article do |a|
+  lable 文章标题
+  = a.text_field :title
+  br
+  lable 文章内容
+  = a.text_area :content
+  br
+  = a.submit '增加'

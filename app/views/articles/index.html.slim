@@ -1,0 +1,22 @@
+- if @articles.present?
+  table
+    thead
+      th 标题
+      th 信息
+      th 操作
+    tbody    
+      -@articles.each do |a|
+        tr
+          td = a.title
+          td = a.content
+          td = link_to '删除', a,  method: :delete
+          td = link_to '修改', edit_article_path(a.id)
+  = link_to '返回首页',categories_path    
+
+
+
+
+
+
+- else
+  | 没有数据!

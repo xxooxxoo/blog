@@ -1,4 +1,10 @@
+我的博客
+br
 =link_to '新建一个类别', new_category_path
+br
+=link_to '新建一篇文章', new_article_path
+br
+=link_to '查看文章', articles_path
 br
 - if @categories.present?
   table
@@ -10,6 +16,9 @@ br
         tr
           td = category.name
           td = link_to '删除', category,  method: :delete
+          td =link_to '修改',  edit_category_path(category.id)
+
+
 - else
   | 没有数据!
-  
+
